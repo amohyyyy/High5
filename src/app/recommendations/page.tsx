@@ -75,3 +75,23 @@ export default function RecommendationsPage() {
 
       {error && (
         <Alert variant="destructive" className="mt-6">
+          <AlertTitle>خطأ</AlertTitle>
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
+      )}
+
+      {recommendations && (
+        <Card className="mt-6">
+          <CardHeader>
+            <CardTitle className="font-headline">الدورات الموصى بها لك</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="prose prose-sm max-w-none text-foreground whitespace-pre-wrap">
+              {recommendations}
+            </div>
+          </CardContent>
+        </Card>
+      )}
+    </div>
+  );
+              }
